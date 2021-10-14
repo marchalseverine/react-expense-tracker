@@ -2,57 +2,31 @@ import React from "react";
 import ExpensesItem from "./ExpensesItem";
 import "./ExpenseApp.css";
 
-export default function ExpensesApp() {
-  const expenses = [
-    {
-      id: "e1",
-      title: "Toilet Paper",
-      amount: 94.12,
-      date: new Date(2020, 7, 14),
-    },
-    {
-      id: "e2",
-      title: "New TV",
-      amount: 799.49,
-      date: new Date(2021, 2, 12),
-    },
-    {
-      id: "e3",
-      title: "Car Insurance",
-      amount: 294.67,
-      date: new Date(2021, 2, 28),
-    },
-    {
-      id: "e4",
-      title: "New Desk (Wooden)",
-      amount: 450,
-      date: new Date(2021, 5, 12),
-    },
-  ];
+export default function ExpensesApp(props) {
   return (
     <div className="expenses-app">
       <h1 className="app-title">Expenses Tracker App </h1>
       <div className="items">
         <ExpensesItem
-          title={expenses[0].title}
-          date={expenses[0].date}
-          amount={expenses[0].amount}
+          title={props.data[0].title}
+          date={props.data[0].date}
+          amount={props.data[0].amount}
         />
         <ExpensesItem
-          title={expenses[1].title}
-          date={expenses[1].date}
-          amount={expenses[1].amount}
+          title={props.data[1].title}
+          date={props.data[1].date}
+          amount={props.data[1].amount}
         />
 
         <ExpensesItem
-          title={expenses[2].title}
-          date={expenses[2].date}
-          amount={expenses[2].amount}
+          title={props.data[2].title}
+          date={props.data[2].date}
+          amount={props.data[2].amount}
         />
         <ExpensesItem
-          title={expenses[3].title}
-          date={expenses[3].date}
-          amount={expenses[3].amount}
+          title={props.data[3].title}
+          date={props.data[3].date}
+          amount={props.data[3].amount}
         />
       </div>
     </div>
