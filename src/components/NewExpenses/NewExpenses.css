@@ -1,6 +1,9 @@
 .expense-form {
   text-align: center;
   margin-top: 50px;
+  background-color: #f7d3ba;
+  padding: 30px;
+  border-radius: 10px;
 }
 .expense___control___date,
 .expense___control___title,
@@ -12,4 +15,14 @@ input {
   border: 1px solid #f7d3ba;
   padding: 10px;
   border-radius: 4px;
+}
+
+.new-expense-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: white;
+  border: 2px solid #f7d3ba;
+  padding: 10px;
+  border-radius: 10px;
 }

@@ -26,6 +26,11 @@ export default function ExpenseForm() {
           </div>
         </div>
       </div>
+      <div className="new-expense__action">
+        <button className="new-expense-button" type="submit">
+          Add New Expense
+        </button>
+      </div>
     </form>
   );
 }
