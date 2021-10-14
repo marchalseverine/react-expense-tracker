@@ -5,7 +5,6 @@ import "./ExpenseApp.css";
 export default function ExpensesApp(props) {
   return (
     <div className="expenses-app">
-      <h1 className="app-title">Expenses Tracker App </h1>
       <div className="items">
         <ExpensesItem
           title={props.data[0].title}

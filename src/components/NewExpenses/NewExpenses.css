@@ -1,0 +1,15 @@
+.expense-form {
+  text-align: center;
+  margin-top: 50px;
+}
+.expense___control___date,
+.expense___control___title,
+.expense___control___amount {
+  margin: 10px;
+}
+
+input {
+  border: 1px solid #f7d3ba;
+  padding: 10px;
+  border-radius: 4px;
+}
