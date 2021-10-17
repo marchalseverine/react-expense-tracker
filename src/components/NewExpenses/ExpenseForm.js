@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./NewExpenses.css";
 
 export default function ExpenseForm() {
-  const [title, setTitle] = useState();
-  const [date, setDate] = useState();
-  const [amount, setAmount] = useState();
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [amount, setAmount] = useState("");
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -26,6 +26,9 @@ export default function ExpenseForm() {
       amount: amount,
     };
     console.log(expenseData);
+    setDate("");
+    setAmount("");
+    setTitle("");
   };
 
   return (
@@ -35,26 +38,25 @@ export default function ExpenseForm() {
           <div className="col-4">
             Date
             <div className="expense___control___date">
-              <input type="date" onChange={handleDateChange} />
+              <input type="date" value={date} onChange={handleDateChange} />
             </div>
           </div>
           <div className="col-4">
             Title
             <div className="expense___control___title">
-              <input
-                type="text"
-                placeholder="What?"
-                onChange={handleTitleChange}
-              />
+              <input type="text" value={title} onChange={handleTitleChange} />
             </div>
           </div>
           <div className="col-4">
             Amount
-            <div
-              className="expense___control___amount"
-              onChange={handleAmountChange}
-            >
-              <input type="number" min="0.00" step="0.00" placeholder="€" />
+            <div className="expense___control___amount">
+              <input
+                type="number"
+                min="0.00"
+                step="0.00"
+                value={amount}
+                onChange={handleAmountChange}
+              />
             </div>
           </div>
         </div>
