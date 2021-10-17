@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import ExpensesItem from "./ExpensesItem";
 import "./ExpenseApp.css";
 import FilterExpense from "./FilterExpense";
 
 export default function ExpensesApp(props) {
+  const [filteredYear, setFilteredYear] = useState("2021");
+  const changeYearFiltered = (selectedYear) => {
+    setFilteredYear(selectedYear);
+    console.log("saved in expenseApp.js");
+  };
   return (
     <div className="expenses-app">
-      <FilterExpense />
+      <FilterExpense
+        onChangeFilter={changeYearFiltered}
+        selected={filteredYear}
+      />
       <div className="items">
         <ExpensesItem
           title={props.data[0].title}
